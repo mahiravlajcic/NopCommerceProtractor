@@ -67,7 +67,7 @@ describe('Follow us page', function () {
         var passwordInput = $('#Password')
         var confirmPasswordInput = $('#ConfirmPassword')
         var registerbutton = $('#register-button')
-        var passwordMessage = $('.field-validation-error')
+        var passwordMessage = $('.field-validation-error');
 
 
         registerMenuLink.click();
