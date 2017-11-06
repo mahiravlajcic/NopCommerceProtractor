@@ -83,8 +83,36 @@ describe('Follow us page', function () {
 
         expect(passwordMessage.getText()).toContain('The password should have at least 6 characters');
 
+    })
 
 
+    it('Verify that user can not registar with invalid confirm password input', function () {
+        var registerMenuLink = element(by.css('.ico-register'));
+        var firstNameInput = $('#FirstName')
+        var lastNameInput = $('#LastName')
+        var emailInput = $('#Email')
+        var passwordInput = $('#Password')
+        var confirmPasswordInput = $('#ConfirmPassword')
+        var registerbutton = $('#register-button')
+        var emailAlreadyExistMessage = $('.message-error')
+
+
+        registerMenuLink.click();
+
+        firstNameInput.sendKeys("Mahira")
+        lastNameInput.sendKeys("Vlajcic")
+        emailInput.sendKeys("test@gmail.com")
+        passwordInput.sendKeys("test123")
+        confirmPasswordInput.sendKeys("test123")
+        registerbutton.click();
+
+        browser.sleep(5000)
+
+        expect(emailAlreadyExistMessage.getText()).toContain('The specified email already exists');
 
     })
+
+
+
+
 })
