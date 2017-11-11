@@ -1,9 +1,3 @@
-   describe ('Registration page', function() {
-
-    beforeAll(function() {
-        browser.ignoreSynchronization = true;
-        browser.get('http://localhost:4582/');
-    });
 
     it ('1. Verify Registration page header', function() {
 
@@ -33,7 +27,7 @@
      it ('2. Verify which input fields are available on Registration page', function() {
 
         // 1. Arrangement
-        var registerMenuLink = element(by.css('.ico-register'));
+         var registerMenuLink = element(by.css('.ico-register'));
         // '#' serves for locating elements by ID attribute (e.g. element(by.css('#FirstName'))
         var firstNameInput = element(by.css('#FirstName'));
         // $ sign is shortcut for the syntax 'element(by.css'
@@ -56,7 +50,7 @@
        it('Verify that user can registar with valid input values', function () {
            var registerMenuLink = element(by.css('.ico-register'));
            var firstNameInput = $('#FirstName')
-           var lastNameInput = $('#LastName')
+             var lastNameInput = $('#LastName')
            var emailInput = $('#Email')
            var passwordInput = $('#Password')
            var confirmPasswordInput = $('#ConfirmPassword')
